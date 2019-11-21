@@ -11,12 +11,14 @@ import { MatSnackBarModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { TodoListComponent } from './todoList/todoList.component';
+import { TodoDetailComponent } from './todoDetail/todoDetail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
    declarations: [
       AppComponent,
       TodoListComponent,
+      TodoDetailComponent
    ],
    imports: [
       BrowserModule,

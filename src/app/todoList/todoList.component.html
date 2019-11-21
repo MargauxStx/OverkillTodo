@@ -21,6 +21,14 @@
                   <div fxFlex>
                     {{todo.etat}}
                   </div>
+                  <div fxFlex fxLayout="row" fxLayoutAlign="space-evenly stretch">
+                    <button mat-raised-button matTooltip="View" matTooltipPosition="below" routerLink="/todoDetail/{{todo.id}}"
+                      routerLinkActive="active" class= "view">
+                      <i class="material-icons">
+                        visibility
+                      </i>
+                    </button>
+                  </div>
                   <div fxFlex>
                     <mat-checkbox color="primary" matTooltip="Check if it's done !" matTooltipPosition="below" (change)="updateStateDone(todo)">Finish</mat-checkbox>
                   </div>
@@ -48,6 +56,14 @@
                 <div fxFlex>
                   {{todo.etat}}
                 </div>
+                <div fxFlex fxLayout="row" fxLayoutAlign="space-evenly stretch">
+                  <button mat-raised-button matTooltip="View" matTooltipPosition="below" routerLink="/todoDetail/{{todo.id}}"
+                    routerLinkActive="active" class= "view">
+                    <i class="material-icons">
+                      visibility
+                    </i>
+                  </button>
+                </div>
                 <div fxFlex>
                   <mat-checkbox color="primary" matTooltip="Check if do it!" matTooltipPosition="below" (change)="updateStateProgress(todo)">To do</mat-checkbox>
                 </div>
@@ -74,6 +90,14 @@
                   </div>
                   <div fxFlex>
                     {{todo.etat}}
+                  </div>
+                  <div fxFlex fxLayout="row" fxLayoutAlign="space-evenly stretch">
+                    <button mat-raised-button matTooltip="View" matTooltipPosition="below" routerLink="/todoDetail/{{todo.id}}"
+                      routerLinkActive="active" class= "view">
+                      <i class="material-icons">
+                        visibility
+                      </i>
+                    </button>
                   </div>
                 </div>
               </div>

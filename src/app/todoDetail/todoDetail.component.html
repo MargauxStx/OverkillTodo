@@ -1,0 +1,41 @@
+<mat-card fxFlex="80%" id="matCard">
+  <mat-card-header fxLayout="row" fxLayoutAlign="space-around center" class = "matCardHeader">
+    <mat-card-title class ="cardTitle">View todo details</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    
+    <div fxLayout="column" fxLayoutAlign="space-around stretch" style="width: 80%;">
+      <div id="flex">
+        <h3>Titre</h3>
+        <div fxFlex="80%">
+          {{todo.titre}}
+        </div>
+      </div>
+  
+      <div id="flex">
+        <h3>Description</h3>
+        <div fxFlex="80%">
+          {{todo.description}}
+        </div>
+      </div>
+  
+      <div id="flex">
+        <h3>Etat</h3>
+        <div fxFlex="80%">
+          <mat-chip-list>
+            <mat-chip [ngClass]="{'pending': todo.etat === 'Pending', 'progress': todo.etat === 'In progress', 'done': todo.etat === 'Done'}">
+              {{todo.etat}}
+            </mat-chip>
+          </mat-chip-list>
+        </div>
+      </div>
+    </div>
+
+      <button (click)="goBack()" mat-raised-button color="red" matTooltip="Back" matTooltipPosition="above" id="flex">
+        <i class="material-icons" style="color: #FFFFFF;">
+          keyboard_backspace
+        </i>
+      </button>
+
+  </mat-card-content>
+</mat-card>
