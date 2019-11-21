@@ -21,6 +21,9 @@
                   <div fxFlex>
                     {{todo.etat}}
                   </div>
+                  <div fxFlex>
+                    <mat-checkbox color="primary" matTooltip="Check if it's done !" matTooltipPosition="below" (change)="updateStateDone(todo)">Finish</mat-checkbox>
+                  </div>
                  </div>
               </div>
             </div>
@@ -44,6 +47,9 @@
                 </div>
                 <div fxFlex>
                   {{todo.etat}}
+                </div>
+                <div fxFlex>
+                  <mat-checkbox color="primary" matTooltip="Check if do it!" matTooltipPosition="below" (change)="updateStateProgress(todo)">To do</mat-checkbox>
                 </div>
               </div>
             </div>

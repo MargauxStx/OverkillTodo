@@ -64,4 +64,23 @@ export class TodoListComponent implements OnInit {
 
   }
 
+  updateStateProgress(todo: Todo) {
+    todo.etat = TodoEtatEnum.PROGRESS;
+    this.countEachEnum(TODOS);
+
+    this.snackBar.open('Changement de la tâche ' + todo.titre + ' de waiting à in progress !', 'Ok', {
+      duration: 3000
+    });
+
+  }
+
+  updateStateDone(todo: Todo) {
+    todo.etat = TodoEtatEnum.DONE;
+    this.countEachEnum(TODOS);
+
+    this.snackBar.open('Changement de la tâche ' + todo.titre + ' de in progress à done !', 'Ok', {
+      duration: 3000
+    });
+  }
+
 }
