@@ -28,6 +28,18 @@
                         visibility
                       </i>
                     </button>
+                    <button mat-raised-button color="accent" matTooltip="Edit" matTooltipPosition="below" routerLink="/todoEdit/{{todo.id}}" 
+                      routerLinkActive="active" class= "edit">
+                      <i class="material-icons">
+                        edit
+                      </i>
+                    </button>
+                    <button mat-raised-button color="warn" matTooltip="Delete" matTooltipPosition="below" (click)="delete(todo.id, todo)" 
+                      class= "delete">
+                      <i class="material-icons">
+                        delete
+                      </i>
+                    </button>
                   </div>
                   <div fxFlex>
                     <mat-checkbox color="primary" matTooltip="Check if it's done !" matTooltipPosition="below" (change)="updateStateDone(todo)">Finish</mat-checkbox>
@@ -61,6 +73,18 @@
                     routerLinkActive="active" class= "view">
                     <i class="material-icons">
                       visibility
+                    </i>
+                  </button>
+                  <button mat-raised-button color="accent" matTooltip="Edit" matTooltipPosition="below" routerLink="/todoEdit/{{todo.id}}" 
+                    routerLinkActive="active" class= "edit">
+                    <i class="material-icons">
+                      edit
+                    </i>
+                  </button>
+                  <button mat-raised-button color="warn" matTooltip="Delete" matTooltipPosition="below" (click)="delete(todo.id, todo)" 
+                    class= "delete">
+                    <i class="material-icons">
+                      delete
                     </i>
                   </button>
                 </div>
@@ -98,6 +122,12 @@
                         visibility
                       </i>
                     </button>
+                    <button mat-raised-button color="warn" matTooltip="Delete" matTooltipPosition="below" (click)="delete(todo.id, todo)" 
+                      class= "delete">
+                      <i class="material-icons">
+                        delete
+                      </i>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -113,6 +143,6 @@
             Ajouter un ticket
           </button>
       </div>
-      
+
 </mat-card>
 

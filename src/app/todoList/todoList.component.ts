@@ -83,4 +83,14 @@ export class TodoListComponent implements OnInit {
     });
   }
 
+  delete(id: number, todo: Todo) {
+    this.todos.splice(id, 1);
+    todo.etat = null;
+    this.countEachEnum(TODOS);
+
+    this.snackBar.open('La tâche ' + todo.titre + ' a été supprimé !', 'Ok', {
+      duration: 3000
+    });
+  }
+
 }

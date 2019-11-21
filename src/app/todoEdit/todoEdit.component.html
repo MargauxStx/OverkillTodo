@@ -1,0 +1,47 @@
+<mat-card fxFlex="80%" id="matCard">
+    <mat-card-header fxLayout="row" fxLayoutAlign="space-around center" class = "matCardHeader">
+      <mat-card-title class ="cardTitle">Change todo details</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      
+    <div *ngIf="todo as todo" fxLayout="column" fxLayoutAlign="space-around stretch" class="divColumn" style="width: 80%;">
+        <div >
+          <form class="todo">
+              <mat-form-field class="titre" id="flex">
+                <input matInput placeholder="Titre de la tache" 
+                  [(ngModel)]="todo.titre" [ngModelOptions]="{standalone: true}">
+              </mat-form-field>
+              <mat-form-field class="description" id="flex">
+                <input matInput placeholder="Description de la tache" 
+                  [(ngModel)]="todo.description" [ngModelOptions]="{standalone: true}">
+              </mat-form-field>
+          </form>
+        </div>
+        
+        <div id="flex">
+          <h3>Etat</h3>
+          <div fxFlex="40%">
+            <mat-chip-list>
+              <mat-chip [ngClass]="{'pending': todo.etat === 'Pending', 'progress': todo.etat === 'In progress', 'done': todo.etat === 'Done'}">{{todo.etat}}</mat-chip>
+            </mat-chip-list>
+          </div>
+        </div>
+
+          <div fxLayout="row" fxLayoutAlign="space-around center" class="divColumn">
+            <button (click)="goBack()" mat-raised-button color="red" matTooltip="Back" matTooltipPosition="above" id="flex">
+              <i class="material-icons" style="color: #FFFFFF;">
+                keyboard_backspace
+              </i>
+            </button>
+            <button mat-raised-button (click)="updateToDo(todo)" color="green" matTooltip="Valider" matTooltipPosition="above" 
+              routerLink="/todos" routerLinkActive="active" id="flex">
+              <i class="material-icons" style="color: #FFFFFF;">
+                done
+              </i>
+            </button>
+          </div>
+
+      </div>
+
+  </mat-card-content>
+</mat-card>

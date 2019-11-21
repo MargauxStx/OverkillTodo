@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { TodoListComponent } from './todoList/todoList.component';
 import { TodoDetailComponent } from './todoDetail/todoDetail.component';
 import { TodoAjoutComponent } from './todoAjout/todoAjout.component';
+import { TodoEditComponent } from './todoEdit/todoEdit.component';
 
 const routes: Routes = [
   { path: 'todos', component: TodoListComponent },
   { path: 'todoDetail/:id', component: TodoDetailComponent },
+  { path: 'todoEdit/:id', component: TodoEditComponent },
   { path: 'todoAjout', component: TodoAjoutComponent },
   { path: '', redirectTo: '/todos', pathMatch: 'full' },
   { path: '**', component: TodoListComponent }

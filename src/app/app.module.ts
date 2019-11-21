@@ -12,18 +12,22 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
+import { MatTooltipModule } from '@angular/material/tooltip';
+
 
 import { TodoListComponent } from './todoList/todoList.component';
 import { TodoDetailComponent } from './todoDetail/todoDetail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TodoAjoutComponent } from './todoAjout/todoAjout.component';
+import { TodoEditComponent } from './todoEdit/todoEdit.component';
 
 @NgModule({
    declarations: [
       AppComponent,
       TodoListComponent,
       TodoDetailComponent,
-      TodoAjoutComponent
+      TodoAjoutComponent,
+      TodoEditComponent
    ],
    imports: [
       BrowserModule,
@@ -37,7 +41,8 @@ import { TodoAjoutComponent } from './todoAjout/todoAjout.component';
       MatCheckboxModule,
       MatInputModule,
       MatSelectModule,
-      FormsModule
+      FormsModule,
+      MatTooltipModule
    ],
    providers: [],
    bootstrap: [
