@@ -1,0 +1,70 @@
+#todoTitleApp {
+    background-color: #00804f;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    color : white;
+    font-size: 2em;
+    margin-top: 2%;
+    text-align: center;
+}
+
+.divColumn {
+    max-width: 80% !important;
+    margin: auto;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+  }
+  
+  .progress {
+    font-weight: bold;
+    background-color: rgb(243, 169, 31);
+    color: #FFFFFF;
+  }
+  
+  .done {  
+    font-weight: bold;  
+    background-color: #008000;
+    color: #FFFFFF;
+  }
+   
+  .waiting {
+    font-weight: bold;
+    background-color: #FF0000;
+    color: #FFFFFF;
+  }
+
+  .cardTitle {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+  }
+  
+  .matCardHeader {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 2% 0 2% 0;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+  }
+  
+  #matCard {
+    background-color: #7b817b45;
+    margin: 10%;
+  }
+  
+  #flex {
+    width: 100%;
+    align-items: center;
+    padding: 0% 3% 0% 3%;
+  }
+  
+  #flex div {
+    padding: 2%;
+  }
+  
+  button {
+    margin: 1% 0 1% 0;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: #02422a96;
+    color: white;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+  }

@@ -1,0 +1,80 @@
+
+  <mat-card fxFlex="80%" id="matCard">
+    <mat-card-header fxLayout="row" fxLayoutAlign="space-around center" class = "matCardHeader">
+      <mat-card-title class ="cardTitle">My Todo List</mat-card-title>
+      <mat-card-subtitle>Nombre de tâche : {{todos.length}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-accordion>
+        <mat-expansion-panel [ngClass]="{'progress' : true}">
+          <mat-expansion-panel-header  class = "expansionHeader">
+            <mat-panel-title>
+                Tache en progression : {{progressNumber}}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+            <div fxLayout="column" fxLayoutAlign="space-evenly stretch" class="divColumn">
+              <div *ngFor= "let todo of tabProgress" fxLayout="row" fxFlex class="todoContainer">
+                <div *ngIf = "todo.etat === 'In progress'" id="flex">
+                  <div fxFlex>
+                    {{todo.titre}}
+                  </div>
+                  <div fxFlex>
+                    {{todo.etat}}
+                  </div>
+                 </div>
+              </div>
+            </div>
+          </mat-expansion-panel>
+      </mat-accordion>
+    </mat-card-content>
+
+    <mat-card-content>
+      <mat-accordion>
+        <mat-expansion-panel [ngClass]="{'waiting' : true}">
+          <mat-expansion-panel-header  class = "expansionHeader">
+            <mat-panel-title>
+              Tache en progression : {{waitingNumber}}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div fxLayout="column" fxLayoutAlign="space-evenly stretch" class="divColumn">
+            <div *ngFor= "let todo of tabWaiting" fxLayout="row" fxFlex class="todoContainer">
+              <div *ngIf = "todo.etat === 'Waiting'" id="flex">
+                <div fxFlex>
+                  {{todo.titre}}
+                </div>
+                <div fxFlex>
+                  {{todo.etat}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-card-content>
+
+    <mat-card-content>
+        <mat-accordion>
+          <mat-expansion-panel [ngClass]="{'done' : true}">
+            <mat-expansion-panel-header  class = "expansionHeader">
+              <mat-panel-title>
+                Tache en progression : {{doneNumber}}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div fxLayout="column" fxLayoutAlign="space-evenly stretch" class="divColumn">
+              <div *ngFor= "let todo of tabDone" fxLayout="row" fxFlex class="todoContainer">
+                <div *ngIf = "todo.etat === 'Done'" id="flex">
+                  <div fxFlex>
+                    {{todo.titre}}
+                  </div>
+                  <div fxFlex>
+                    {{todo.etat}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+
+      </mat-card-content>
+</mat-card>
+

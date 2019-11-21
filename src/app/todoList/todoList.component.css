@@ -1,0 +1,17 @@
+.todoContainer {
+  margin: 1% 0 1% 0;
+  padding: 1%;
+  border-radius: 1em;
+  background-color: #02422a96;
+  color: white;
+  font-family: 'Franklin Gothic Medium', sans-serif;
+}
+
+.expansionHeader {
+  margin: 1% 0 1% 0;
+}
+
+.mat-card-subtitle {
+  color: #fff;
+  font-family: 'Franklin Gothic Medium', sans-serif;
+}
