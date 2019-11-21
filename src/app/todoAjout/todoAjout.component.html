@@ -1,0 +1,37 @@
+<mat-card fxFlex="80%" id="matCard">
+  <mat-card-header fxLayout="row" fxLayoutAlign="space-around center" class = "matCardHeader">
+    <mat-card-title class ="cardTitle">Ajout todo</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    
+    <div fxLayout="column" fxLayoutAlign="space-around stretch" class="divColumn" style="width: 80%;">
+      <div fxLayout="column" fxLayoutAlign="start center" class="flex">
+        <form class="todo" id="flex">
+            <mat-form-field class="titre" id="flex" >
+              <input matInput placeholder="Titre de la tache" value="" required>
+            </mat-form-field>
+            <mat-form-field class="description" id="flex">
+              <input matInput placeholder="Description de la tache" value="">
+            </mat-form-field>
+        </form>
+
+        <div fxLayout="row" fxLayoutAlign="space-around center" class="divColumn">
+          <button mat-raised-button color="red" matTooltip="Back" matTooltipPosition="above" 
+            routerLink="/todos" routerLinkActive="active" id="flex">
+            <i class="material-icons" style="color: #FFFFFF;">
+              keyboard_backspace
+            </i>
+          </button>
+          <button mat-raised-button (click)="add(todo.titre, todo.description)" color="green" matTooltip="Valider" matTooltipPosition="above" 
+            routerLink="/todos" routerLinkActive="active" id="flex">
+            <i class="material-icons" style="color: #FFFFFF;">
+              done
+            </i>
+          </button>
+        </div>
+      
+      </div>
+    </div>
+
+</mat-card-content>
+</mat-card>

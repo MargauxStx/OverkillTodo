@@ -9,16 +9,21 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSnackBarModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
 
 import { TodoListComponent } from './todoList/todoList.component';
 import { TodoDetailComponent } from './todoDetail/todoDetail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TodoAjoutComponent } from './todoAjout/todoAjout.component';
 
 @NgModule({
    declarations: [
       AppComponent,
       TodoListComponent,
-      TodoDetailComponent
+      TodoDetailComponent,
+      TodoAjoutComponent
    ],
    imports: [
       BrowserModule,
@@ -29,7 +34,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       MatSnackBarModule,
       BrowserAnimationsModule,
       FlexLayoutModule,
-      MatCheckboxModule
+      MatCheckboxModule,
+      MatInputModule,
+      MatSelectModule,
+      FormsModule
    ],
    providers: [],
    bootstrap: [
